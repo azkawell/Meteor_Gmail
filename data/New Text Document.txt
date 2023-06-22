@@ -1,0 +1,45 @@
+[
+    {
+        "_id": "nD6yD6Xp8GwniGLWj",
+        "profile": {
+            "name": "Supernftier"
+        },
+        "createdAt": "2023-01-19T19:49:40.435Z",
+        "services": {
+            "google": {
+                "accessToken": "ya29.a0AX9GBdXnTK4nK7TDPEBNAyFrgpOpgV5aHTjsbOWf9cPl1LtRlLDDa21gpkKF_PaWRoPaSZuJaPGviWc5kTk4HsO6oV_uLqgYzCAludLU1-GrPKeF-6g4NxOlAZG1HjZjvNltgt3DoCMXmK6h5uSqMEM0jR8CyQaCgYKAVUSARESFQHUCsbC6rIQKSsZql65ZxWQA3Prjw0165",
+                "idToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImQzN2FhNTA0MzgxMjkzN2ZlNDM5NjBjYTNjZjBlMjI4NGI2ZmMzNGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiOTIyMzQyNzU5MjI2LXFtNzhhZjFsN3NxcGFnZnVtdG9mYWdncGxhZWRmY2wwLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiOTIyMzQyNzU5MjI2LXFtNzhhZjFsN3NxcGFnZnVtdG9mYWdncGxhZWRmY2wwLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTA1ODE0MzM0NjQwNTEyOTc0NTU5IiwiZW1haWwiOiJzdXBlcm5mdGllckBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6Imd0VkVxWFdvUWxUZEQzaWFjVUFJbHciLCJpYXQiOjE2NzQyNDcxOTcsImV4cCI6MTY3NDI1MDc5N30.hOO0PO_zI7hcX929i3tFjga5oqyaCWzlUIsPytcRV4pJAH3Q3HCcOa9-7aKgTPrlLvDBVAqNKrfeE_oFZFjWSp27QMkYyjs9704PM-uFo7Sh1IWWHmEYT_9bo1z6nV3AG8A8mSe25ps7CxvjLKLTfrA0MY5PrjQLw_QhlYo1XgGTvjOR3xs6aHaOblauoXPm7uj9qAD4dDPXWFK9ORtlnc0mG-ArfW_Dry9ODjG6LvIxfLSdMQAUiAn09haC8G8NlO0YGJFrsN-VDdxSPtkccEl-Y7CRWOeFNs3e7yhWwjAbxlHDv5fOK91YkSOevVag6maVZNTXfFfeuyvY-UJWyg",
+                "scope": [
+                    "https://www.googleapis.com/auth/userinfo.email",
+                    "https://www.googleapis.com/auth/userinfo.profile",
+                    "openid"
+                ],
+                "expiresAt": 1674250796938,
+                "id": "105814334640512974559",
+                "email": "supernftier@gmail.com",
+                "verified_email": true,
+                "name": "Supernftier",
+                "given_name": "Supernftier",
+                "picture": "https://lh3.googleusercontent.com/a/AEdFTp7sEx1gRRXgqbbi64KuBzrFu6UJlk4lqcJvc6LH=s96-c",
+                "locale": "en"
+            },
+            "resume": {
+                "loginTokens": [
+                    {
+                        "when": "2023-01-20T20:39:58.125Z",
+                        "hashedToken": "otvY90Vt3FrDWeHjk2kdWEJqQtJ5AqbKke81GYd+JUQ="
+                    }
+                ]
+            }
+        }
+    }
+]
+
+
+------------------
+{
+    "_id": "w5vi48q5aZ5jWXQoo",
+    "service": "google",
+    "clientId": "922342759226-qm78af1l7sqpagfumtofaggplaedfcl0.apps.googleusercontent.com",
+    "loginStyle": "popup"
+}

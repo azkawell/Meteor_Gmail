@@ -1,0 +1,666 @@
+<template name="admindashboard">
+
+  <div class="wrapper ">
+    {{> adminheader }}
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
+        <div class="container-fluid">
+          <div class="navbar-wrapper" style="width: 50%;">
+            <input type="text" name="" id="" placeholder="Search mail">
+            <button style="border: none; background: transparent;"><i class="material-icons">search</i></button>
+          </div>
+          <div class="navbar-wrapper" style="width: 50%; justify-content: end;">
+            1 - 20 OF MANY
+            &nbsp;&nbsp;
+            <i class="material-icons">keyboard_arrow_left</i>
+            &nbsp;&nbsp;
+            <i class="material-icons">keyboard_arrow_right</i>
+            &nbsp;&nbsp;
+            <i class="material-icons">sync</i>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+         
+        </div>
+        <div class="divider"></div>
+      </nav>
+      
+      <!-- End Navbar -->
+      <div class="content" style="margin-top: 85px!important; padding: 0!important;">
+        <div class="dashboardclaims">
+          <div class="table-responsive">
+            <!-- <button class="testBtn">testet</button> -->
+            <table class="table table-hover">
+          
+              <tbody>
+                {{#if inboxData}}
+                  {{#each data in inboxData}}
+                    <tr style="background-color: white;">
+                      <td>
+                          <label style="display: flex; align-items: center;">
+                            <input type="checkbox" name="" id="" class="filled-in" />
+                            <span></span>
+                          </label>
+                      </td>
+                      <td>
+                        <a class="row viewemailbtn {{#if data.readStauts}}text-grey{{else}}text-black{{/if}}" style="cursor: pointer;" href="/viewemail:{{data._id}}">
+                          <div style="display: flex; align-items: center;" class="col s2">
+                            <i class="material-icons" style="color: #FF9000;">label</i>
+                            {{data.subjects}}
+                          </div>
+                          <div class="col s8">
+                            {{data.textbody}}
+                          </div>
+                          <div class="col s2">
+                            {{calcDate data.createdAt}}
+                          </div>
+                        </a>
+                      </td>
+                      <td>
+                        <!-- <span class='dropdown-trigger' style="padding: 5px 1px;"><i class="material-icons">more_horiz</i>
+                          <ul class="dropdown-body">
+                            <li><a href="#!">one</a></li>
+                            <li><a href="#!">two</a></li>
+                            <li class="divider" tabindex="-1"></li>
+                            <li><a href="#!">three</a></li>
+                            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                          </ul>
+                        </span> -->
+                        <span name="{{data._id}}" class="deletebtn"><i class="material-icons">delete</i></span>
+                        <span class="importantbtn" name="{{data._id}}"><i class="material-icons">flag</i></span>
+                        <span class="starbtn" name="{{data._id}}"><i class="material-icons">star</i></span>
+                      </td>
+                    </tr>
+                  {{/each}}
+                {{/if}}
+          
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+  {{> footer}}
+    </div>
+  </div>
+</template>
+
+<template name="trashboard">
+
+  <div class="wrapper ">
+    {{> adminheader }}
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
+        <div class="container-fluid">
+          <div class="navbar-wrapper" style="width: 50%;">
+            <input type="text" name="" id="" placeholder="Search mail">
+            <button style="border: none; background: transparent;"><i class="material-icons">search</i></button>
+          </div>
+          <div class="navbar-wrapper" style="width: 50%; justify-content: end;">
+            1 - 20 OF MANY
+            &nbsp;&nbsp;
+            <i class="material-icons">keyboard_arrow_left</i>
+            &nbsp;&nbsp;
+            <i class="material-icons">keyboard_arrow_right</i>
+            &nbsp;&nbsp;
+            <i class="material-icons">sync</i>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+         
+        </div>
+        <div class="divider"></div>
+      </nav>
+      
+      <!-- End Navbar -->
+      <div class="content" style="margin-top: 85px!important; padding: 0!important;">
+        <div class="dashboardclaims">
+          <div class="table-responsive">
+            <table class="table table-hover">
+          
+              <tbody>
+            
+                {{#if trashData}}
+                  {{#each data in trashData}}
+                    <tr style="background-color: white;">
+                      <td>
+                        <label style="display: flex; align-items: center;">
+                          <input type="checkbox" name="" id="" class="filled-in" />
+                          <span></span>
+                        </label>
+                      </td>
+                      <td>
+                        <div style="display: flex; align-items: center;">
+                          <i class="material-icons" style="color: #FF9000;">label</i>
+                          {{data.subjects}}
+                        </div>
+                      </td>
+                      <td>{{data.textbody}}</td>
+                      <!-- <td>{{calcDate data.createdAt}}</td> -->
+                    </tr>
+            
+                  {{/each}}
+                {{/if}}
+          
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+  {{> footer}}
+    
+    </div>
+  </div>
+</template>
+
+<template name="importantdashboard">
+
+  <div class="wrapper ">
+    {{> adminheader }}
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
+        <div class="container-fluid">
+          <div class="navbar-wrapper" style="width: 50%;">
+            <input type="text" name="" id="" placeholder="Search mail">
+            <button style="border: none; background: transparent;"><i class="material-icons">search</i></button>
+          </div>
+          <div class="navbar-wrapper" style="width: 50%; justify-content: end;">
+            1 - 20 OF MANY
+            &nbsp;&nbsp;
+            <i class="material-icons">keyboard_arrow_left</i>
+            &nbsp;&nbsp;
+            <i class="material-icons">keyboard_arrow_right</i>
+            &nbsp;&nbsp;
+            <i class="material-icons">sync</i>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+         
+        </div>
+        <div class="divider"></div>
+      </nav>
+      
+      <!-- End Navbar -->
+      <div class="content" style="margin-top: 85px!important; padding: 0!important;">
+        <div class="dashboardclaims">
+          <div class="table-responsive">
+            <table class="table table-hover">
+          
+              <tbody>
+            
+                {{#if importantData}}
+                  {{#each data in importantData}}
+                    <tr style="background-color: white;">
+                      <td>
+                        <label style="display: flex; align-items: center;">
+                          <input type="checkbox" name="" id="" class="filled-in" />
+                          <span></span>
+                        </label>
+                      </td>
+                      <td>
+                        <a class="row viewemailbtn {{#if data.readStauts}}text-grey{{else}}text-black{{/if}}" style="cursor: pointer;" href="/viewemail:{{data._id}}">
+                          <div style="display: flex; align-items: center;" class="col s2">
+                            <i class="material-icons" style="color: #FF9000;">label</i>
+                            {{data.subjects}}
+                          </div>
+                          <div class="col s8">
+                            {{data.textbody}}
+                          </div>
+                          <div class="col s2">
+                            {{calcDate data.createdAt}}
+                          </div>
+                        </a>
+                      </td>
+                      <!-- <td>{{calcDate data.createdAt}}</td> -->
+                    </tr>
+            
+                  {{/each}}
+                {{/if}}
+          
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+  {{> footer}}
+    
+    </div>
+  </div>
+</template>
+
+<template name="starreddashboard">
+
+  <div class="wrapper ">
+    {{> adminheader }}
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
+        <div class="container-fluid">
+          <div class="navbar-wrapper" style="width: 50%;">
+            <input type="text" name="" id="" placeholder="Search mail">
+            <button style="border: none; background: transparent;"><i class="material-icons">search</i></button>
+          </div>
+          <div class="navbar-wrapper" style="width: 50%; justify-content: end;">
+            1 - 20 OF MANY
+            &nbsp;&nbsp;
+            <i class="material-icons">keyboard_arrow_left</i>
+            &nbsp;&nbsp;
+            <i class="material-icons">keyboard_arrow_right</i>
+            &nbsp;&nbsp;
+            <i class="material-icons">sync</i>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+         
+        </div>
+        <div class="divider"></div>
+      </nav>
+      
+      <!-- End Navbar -->
+      <div class="content" style="margin-top: 85px!important; padding: 0!important;">
+        <div class="dashboardclaims">
+          <div class="table-responsive">
+            <table class="table table-hover">
+          
+              <tbody>
+            
+                {{#if starredData}}
+                  {{#each data in starredData}}
+                    <tr style="background-color: white;">
+                      <td>
+                        <label style="display: flex; align-items: center;">
+                          <input type="checkbox" name="" id="" class="filled-in" />
+                          <span></span>
+                        </label>
+                      </td>
+                      <td>
+                        <a class="row viewemailbtn {{#if data.readStauts}}text-grey{{else}}text-black{{/if}}" style="cursor: pointer;" href="/viewemail:{{data._id}}">
+                          <div style="display: flex; align-items: center;" class="col s2">
+                            <i class="material-icons" style="color: #FF9000;">label</i>
+                            {{data.subjects}}
+                          </div>
+                          <div class="col s8">
+                            {{data.textbody}}
+                          </div>
+                          <div class="col s2">
+                            {{calcDate data.createdAt}}
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+            
+                  {{/each}}
+                {{/if}}
+          
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+  {{> footer}}
+    
+    </div>
+  </div>
+</template>
+
+<template name="outboxdashboard">
+
+  <div class="wrapper ">
+    {{> adminheader }}
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
+        <div class="container-fluid">
+          <div class="navbar-wrapper" style="width: 50%;">
+            <input type="text" name="" id="" placeholder="Search mail">
+            <button style="border: none; background: transparent;"><i class="material-icons">search</i></button>
+          </div>
+          <div class="navbar-wrapper" style="width: 50%; justify-content: end;">
+            1 - 20 OF MANY
+            &nbsp;&nbsp;
+            <i class="material-icons">keyboard_arrow_left</i>
+            &nbsp;&nbsp;
+            <i class="material-icons">keyboard_arrow_right</i>
+            &nbsp;&nbsp;
+            <i class="material-icons">sync</i>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+         
+        </div>
+        <div class="divider"></div>
+      </nav>
+      
+      <!-- End Navbar -->
+      <div class="content" style="margin-top: 85px!important; padding: 0!important;">
+        <div class="dashboardclaims">
+          <div class="table-responsive">
+            <table class="table table-hover">
+          
+              <tbody>
+            
+                {{#if outboxData}}
+                  {{#each data in outboxData}}
+                    <tr style="background-color: white;">
+                      <td>
+                          <label style="display: flex; align-items: center;">
+                            <input type="checkbox" name="" id="" class="filled-in" />
+                            <span></span>
+                          </label>
+                      </td>
+                      <td>
+                        <a class="row" style="cursor: pointer; color: black;" href="/viewemail:{{data._id}}">
+                          <div style="display: flex; align-items: center;" class="col s2">
+                            <i class="material-icons" style="color: #FF9000;">label</i>
+                            {{data.subjects}}
+                          </div>
+                          <div class="col s8">
+                            {{data.textbody}}
+                          </div>
+                          <div class="col s2">
+                            {{calcDate data.createdAt}}
+                          </div>
+                        </a>
+                      </td>
+                      <td>
+                        <!-- <span class='dropdown-trigger' style="padding: 5px 1px;"><i class="material-icons">more_horiz</i>
+                          <ul class="dropdown-body">
+                            <li><a href="#!">one</a></li>
+                            <li><a href="#!">two</a></li>
+                            <li class="divider" tabindex="-1"></li>
+                            <li><a href="#!">three</a></li>
+                            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                          </ul>
+                        </span> -->
+                        <span name="{{data._id}}" class="deletebtn"><i class="material-icons">delete</i></span>
+                        <span class="importantbtn" name="{{data._id}}"><i class="material-icons">flag</i></span>
+                        <span class="starbtn" name="{{data._id}}"><i class="material-icons">star</i></span>
+                      </td>
+                    </tr>
+                  {{/each}}
+                {{/if}}
+          
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+  {{> footer}}
+    </div>
+  </div>
+</template>
+
+<template name="viewemail">
+
+  <div class="wrapper ">
+    {{> adminheader }}
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
+        <div class="container-fluid">
+          <div class="navbar-wrapper" style="width: 50%;">
+            <input type="text" name="" id="" placeholder="Search mail">
+            <button style="border: none; background: transparent;"><i class="material-icons">search</i></button>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+         
+        </div>
+        <div class="divider"></div>
+      </nav>
+      
+      <!-- End Navbar -->
+      <div class="content" style="margin-top: 85px!important; padding: 0!important; background: white;">
+        <div class="viewemailpanel">
+          {{#if emailData}}
+          <div style="background: white;">
+            <span name="" class="backbtn"><i class="material-icons">arrow_back</i></span>
+            <span name="{{emailData._id}}" class="deletebtn"><i class="material-icons">delete</i></span>
+            <span class="importantbtn" name="{{emailData._id}}"><i class="material-icons">flag</i></span>
+            <span class="starbtn" name="{{emailData._id}}"><i class="material-icons">star</i></span>
+          </div>
+          <div style="padding: 30px; font-size: 25px;">
+            {{emailData.subjects}}
+          </div>
+          <div style="display: flex; align-items: center;">
+            <div>
+              <i class="material-icons" style="font-size: 50px; padding: 0 20px;">account_circle</i>
+            </div>
+            <div>
+              {{emailData.recipients}}
+              <p style="color: darkkhaki;">to me</p>
+            </div>
+          </div>
+          <div style="padding: 20px;">
+            {{emailData.textbody}}
+          </div>
+          <div>
+
+          </div>
+          {{/if}}
+        </div>
+      </div>
+  {{> footer}}
+    
+    </div>
+  </div>
+</template>
+
+<template name="unreaddashboard">
+
+  <div class="wrapper ">
+    {{> adminheader }}
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
+        <div class="container-fluid">
+          <div class="navbar-wrapper" style="width: 50%;">
+            <input type="text" name="" id="" placeholder="Search mail">
+            <button style="border: none; background: transparent;"><i class="material-icons">search</i></button>
+          </div>
+          <div class="navbar-wrapper" style="width: 50%; justify-content: end;">
+            1 - 20 OF MANY
+            &nbsp;&nbsp;
+            <i class="material-icons">keyboard_arrow_left</i>
+            &nbsp;&nbsp;
+            <i class="material-icons">keyboard_arrow_right</i>
+            &nbsp;&nbsp;
+            <i class="material-icons">sync</i>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+         
+        </div>
+        <div class="divider"></div>
+      </nav>
+      
+      <!-- End Navbar -->
+      <div class="content" style="margin-top: 85px!important; padding: 0!important;">
+        <div class="dashboardclaims">
+          <div class="table-responsive">
+            <table class="table table-hover">
+          
+              <tbody>
+            
+                {{#if unreadData}}
+                  {{#each data in unreadData}}
+                    <tr style="background-color: white;">
+                      <td>
+                          <label style="display: flex; align-items: center;">
+                            <input type="checkbox" name="" id="" class="filled-in" />
+                            <span></span>
+                          </label>
+                      </td>
+                      <td>
+                        <a class="row viewemailbtn {{#if data.readStauts}}text-grey{{else}}text-black{{/if}}" style="cursor: pointer;" href="/viewemail:{{data._id}}">
+                          <div style="display: flex; align-items: center;" class="col s2">
+                            <i class="material-icons" style="color: #FF9000;">label</i>
+                            {{data.subjects}}
+                          </div>
+                          <div class="col s8">
+                            {{data.textbody}}
+                          </div>
+                          <div class="col s2">
+                            {{calcDate data.createdAt}}
+                          </div>
+                        </a>
+                      </td>
+                      <td>
+                        <!-- <span class='dropdown-trigger' style="padding: 5px 1px;"><i class="material-icons">more_horiz</i>
+                          <ul class="dropdown-body">
+                            <li><a href="#!">one</a></li>
+                            <li><a href="#!">two</a></li>
+                            <li class="divider" tabindex="-1"></li>
+                            <li><a href="#!">three</a></li>
+                            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                          </ul>
+                        </span> -->
+                        <span name="{{data._id}}" class="deletebtn"><i class="material-icons">delete</i></span>
+                        <span class="importantbtn" name="{{data._id}}"><i class="material-icons">flag</i></span>
+                        <span class="starbtn" name="{{data._id}}"><i class="material-icons">star</i></span>
+                      </td>
+                    </tr>
+                  {{/each}}
+                {{/if}}
+          
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+  {{> footer}}
+    </div>
+  </div>
+</template>
+
+<template name="draftdashboard">
+
+  <div class="wrapper ">
+    {{> adminheader }}
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
+        <div class="container-fluid">
+          <div class="navbar-wrapper" style="width: 50%;">
+            <input type="text" name="" id="" placeholder="Search mail">
+            <button style="border: none; background: transparent;"><i class="material-icons">search</i></button>
+          </div>
+          <div class="navbar-wrapper" style="width: 50%; justify-content: end;">
+            1 - 20 OF MANY
+            &nbsp;&nbsp;
+            <i class="material-icons">keyboard_arrow_left</i>
+            &nbsp;&nbsp;
+            <i class="material-icons">keyboard_arrow_right</i>
+            &nbsp;&nbsp;
+            <i class="material-icons">sync</i>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+         
+        </div>
+        <div class="divider"></div>
+      </nav>
+      
+      <!-- End Navbar -->
+      <div class="content" style="margin-top: 85px!important; padding: 0!important;">
+        <div class="dashboardclaims">
+          <div class="table-responsive">
+            <table class="table table-hover">
+          
+              <tbody>
+            
+                {{#if draftData}}
+                  {{#each data in draftData}}
+                    <tr style="background-color: white;">
+                      <td>
+                          <label style="display: flex; align-items: center;">
+                            <input type="checkbox" name="" id="" class="filled-in" />
+                            <span></span>
+                          </label>
+                      </td>
+                      <td>
+                        <a class="row" style="cursor: pointer; color: black;" href="/viewemail:{{data._id}}">
+                          <div style="display: flex; align-items: center;" class="col s2">
+                            <i class="material-icons" style="color: #FF9000;">label</i>
+                            {{data.subjects}}
+                          </div>
+                          <div class="col s8">
+                            {{data.textbody}}
+                          </div>
+                          <div class="col s2">
+                            {{calcDate data.createdAt}}
+                          </div>
+                        </a>
+                      </td>
+                      <td>
+                        <!-- <span class='dropdown-trigger' style="padding: 5px 1px;"><i class="material-icons">more_horiz</i>
+                          <ul class="dropdown-body">
+                            <li><a href="#!">one</a></li>
+                            <li><a href="#!">two</a></li>
+                            <li class="divider" tabindex="-1"></li>
+                            <li><a href="#!">three</a></li>
+                            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                          </ul>
+                        </span> -->
+                        <span name="{{data._id}}" class="deletebtn"><i class="material-icons">delete</i></span>
+                        <span class="importantbtn" name="{{data._id}}"><i class="material-icons">flag</i></span>
+                        <span class="starbtn" name="{{data._id}}"><i class="material-icons">star</i></span>
+                      </td>
+                    </tr>
+                  {{/each}}
+                {{/if}}
+          
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+  {{> footer}}
+    </div>
+  </div>
+</template>

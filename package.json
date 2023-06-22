@@ -1,0 +1,30 @@
+{
+  "name": "water-damage",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.1.5",
+    "base64-img": "^1.0.4",
+    "bcrypt": "^5.1.0",
+    "exif": "^0.6.0",
+    "heic-convert": "^1.2.4",
+    "html-pdf": "^3.0.1",
+    "https": "^1.0.0",
+    "meteor-node-stubs": "^0.4.1",
+    "moment-timezone": "^0.5.27",
+    "square-connect": "^3.20200528.0",
+    "stripe": "^8.84.0"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  }
+}

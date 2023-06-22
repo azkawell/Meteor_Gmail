@@ -1,0 +1,194 @@
+.btn-large.btn-primary {
+    color: #fff;
+    /* background-color: #9c27b0;
+    border-color: #9c27b0; */
+    background: linear-gradient(270deg, rgba(44, 98, 115, 1) 0%, rgba(46, 139, 169, 1) 27%, rgba(48, 169, 208, 1) 100%);
+    box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
+}
+
+button .material-icons {
+    vertical-align: middle;
+}
+
+.logincard .card {
+    margin-top: 116px;
+}
+
+.logincard .card-body {
+    margin-top: -64px;
+}
+
+.loginbuttonarea .btn-large {
+    width: 208px;
+    margin-top: -20px;
+}
+
+.loginbuttonarea .registerlink {
+    color: #000;
+    font-size: 18px;
+}
+
+.logincard .loginlogo {
+    width: 18%;
+    margin: auto;
+    position: inherit;
+    top: -72px;
+    background: #fff;
+    /* border-radius: 52%; */
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    padding-top: 12px;
+}
+
+.footertext {
+    text-align: center;
+    color: rgba(180, 175, 175, 0.658);
+}
+
+.footertext a {
+    color: #2fa1c6;
+}
+
+.accountcircle {
+    margin: auto;
+    text-align: center;
+}
+
+.accountcircle .material-icons {
+    color: #000;
+}
+
+.composeEmail {
+    font-size: 1.25rem;
+}
+/* .sidebar[data-color="orange"] li.active {
+    background-color: #d4d9f1;
+}
+
+.sidebar[data-background-color="black"] .nav .nav-item.active i {
+} */
+
+.activeSidebar {
+    background-color: #d4d9f1;
+}
+
+.activeSidebar:hover {
+    background-color: #d4d9f1!important;
+}
+
+.nav-item:hover {
+    background-color: #d4d9f1!important;
+}
+
+.nav-link {
+    padding: 5px 5px!important;
+    margin: 0!important;
+}
+.profile-img {
+    max-width: 150px !important;
+}
+
+.addClaim .reportno,
+.editClaim .reportno {
+    color: #a5a5a5;
+    font-size: 30px;
+}
+
+[type="checkbox"].filled-in:disabled:not(:checked)+span:not(.lever):after {
+    background-color: #0097a7;
+}
+
+[type="checkbox"].filled-in:checked+span:not(.lever):after {
+    background-color: #0097a7;
+}
+
+.addClaim hr,
+.editClaim hr {
+    border: solid 1px #0097a7;
+}
+
+.addClaim .row,
+.editClaim .row {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.addClaim .row p,
+.editClaim .row p {
+    margin-bottom: 0px;
+}
+
+.tiggerinput {
+    display: none;
+}
+
+.reactive-table-filter {
+    position: absolute !important;
+    right: 2% !important;
+    width: 30% !important;
+}
+
+.reactive-table-input {
+    width: 30% !important;
+}
+
+.previewblock span {
+    display: none;
+}
+
+.previewblock .imageprocount {
+    display: block;
+    position: absolute;
+    margin-top: -32px;
+    margin-left: 5px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    width: 80px;
+    /* border-radius: 12%; */
+}
+
+.profilename {
+    width: fit-content;
+    border: none!important;
+    box-shadow: none;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.profilelist {
+    overflow: auto!important;
+    height: 300px;
+}
+
+.dropdown-body {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.dropdown-trigger:hover > ul {
+display:block;
+}
+
+.sidebar .nav li a, .sidebar .nav li i {
+    color: black!important;
+}
+
+.viewemailpanel span {
+    padding: 2px 15px;
+}
+
+.text-grey {
+    color: #555555;
+}
+
+.text-black {
+    color: black;
+    font-weight: 600;
+}
+
+.viewemailpanel span {
+    cursor: pointer;
+}

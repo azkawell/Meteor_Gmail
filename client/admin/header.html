@@ -1,0 +1,101 @@
+<template name="adminheader">
+  <div class="sidebar">
+    <!--
+      Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+      Tip 2: you can also add an image using data-image tag
+  -->
+    <div class="logo accountcircle">
+      <a href="#createmodal" class="modal-trigger" style="color: black;"><span class="composeEmail">+ COMPOSE EMAIL</span></a>
+    </div>
+    <div class="sidebar-wrapper">
+      <ul class="nav">
+        <li class="nav-item">
+          <a href="/dashboard" class="nav-link {{#if currentRoute 'dashboard'}}activeSidebar{{/if}}">
+            <i class="material-icons">inbox</i>
+             <p>Inbox </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/unread" class="nav-link {{#if currentRoute 'unread'}}activeSidebar{{/if}}">
+            <i class="material-icons">markunread</i>
+             <p>Unread </p>
+          </a>
+        </li>
+        <li class="nav-item {{#if currentRoute 'sent'}}activeSidebar{{/if}}">
+          <a href="/sent" class="nav-link">
+            <i class="material-icons">send</i>
+             <p>Sent </p>
+          </a>
+        </li>
+        <li class="nav-item {{#if currentRoute 'important'}}activeSidebar{{/if}}">
+          <a href="/important" class="nav-link">
+            <i class="material-icons">flag</i>
+             <p>Important </p>
+          </a>
+        </li>
+        <li class="nav-item {{#if currentRoute 'starred'}}activeSidebar{{/if}}">
+          <a href="/starred" class="nav-link">
+            <i class="material-icons">star</i>
+             <p>Starred </p>
+          </a>
+        </li>
+        <li class="nav-item {{#if currentRoute 'draft'}}activeSidebar{{/if}}">
+          <a href="/draft" class="nav-link">
+            <i class="material-icons">drafts</i>
+             <p>Draft </p>
+          </a>
+        </li>
+        <li class="nav-item {{#if currentRoute 'spam'}}activeSidebar{{/if}}">
+          <a href="/dashboard" class="nav-link">
+            <i class="material-icons">error</i>
+             <p>Spam </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/trash" class="nav-link {{#if currentRoute 'trash'}}activeSidebar{{/if}}">
+            <i class="material-icons">delete</i>
+             <p>Trash </p>
+          </a>
+        </li>
+        <!-- {{#if currentRoute 'dashboard'}}active{{/if}}" -->
+        <li class="nav-item ">
+          <a href="#" id="logout" class="nav-link">
+            <i class="material-icons">lightbulb_outline</i>
+             <p>Logout</p>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+  
+  <div id="createmodal" class="modal">
+    <div class="modal-content">
+      <h4>New Message</h4>
+      <form id="sendEmail">
+      <div class="">
+        <div class="input-field col s12">
+          <input id="recipients" type="email" class="validate">
+          <label for="recipients">Recipients</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="subjects" type="text" class="validate">
+          <label for="subjects">Subjects</label>
+        </div>
+        <div class="input-field col s12">
+          <textarea id="textbody" class="materialize-textarea" rows="10" data-length="420" placeholder=""></textarea>
+          <label for="">Textarea</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <!-- <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a> -->
+        <button class="waves-effect waves-green btn todraftbtn"><i class="material-icons">airplay</i> To draft</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="submit" class="waves-effect green waves-green btn">Send <i class="material-icons">send</i></button>
+      </div>
+      </form>
+    </div>
+  </div>
+</template>

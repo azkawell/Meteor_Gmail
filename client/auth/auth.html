@@ -1,0 +1,354 @@
+<template name="register">
+    &nbsp;<br><br><br><br>
+    <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4 offset-md-4 logincard" style="margin: auto; text-align:center;">
+              <h2 class="white-text">Let's get started now!</h2>
+              <h3 class="white-text">Or <a href="/" class="white-text">login</a> if already registered</h3>
+              <div class="card">
+                <img class="loginlogo" src="./wdicon.png">
+                <div class="card-body">
+                    <form>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <label class="active">Register Name</label>
+                            <input type="text"  name="registerName"  class="validate" min="3" required>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <label class="active">Register Email</label>
+                            <input type="email" name="registerEmail"  class="validate"  required>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <label class="active">Register Password</label>
+                            <input name="registerPassword" type="password"  class="validate" min="6" required>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12 loginbuttonarea">
+                        <button class="btn-large " type="submit" > Register</button><br><br>
+                          <a class="registerlink" href="/">Login Now</a>
+                          </div>
+                          </div>
+                      </form>
+                </div>
+              </div>
+            </div>
+ 
+          </div>
+        </div>
+      </div>
+
+      <style>
+        body {
+          background-image: url("./wd-back.jpg");
+         background-size: cover;
+          background-color: #cccccc;
+         }
+      </style>
+               
+</template>
+<template name="login">
+      &nbsp;<br><br><br><br>
+      <div class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-4 offset-md-4 logincard" style="margin: auto; text-align:center;">
+               <h2 class="white-text">Let's get started now!</h2>
+               <h3 class="white-text">Or <a href="/register" class="white-text">create an account</a> if not registered yet</h3>
+
+                <div class="card">
+                  <img class="loginlogo" src="./wdicon.png">
+                  
+                  <div class="card-body">
+                      <form class="s6 offset-s3">
+                          <!-- <div class="row">
+                            <div class="input-field col s12">
+                              <label class="active">Login Email</label>
+                              <input type="email" name="loginEmail" class="validate" min="3" required>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <label class="active">Login Password</label>
+                              <input type="password" name="loginPassword" class="validate"  required><br>
+                              <a href="/forgotpassword">Forgot your password?</a>
+                            </div>
+                           
+                          </div> -->
+                          <div class="row">
+                            <div class="input-field col s12 loginbuttonarea">
+                              <!-- {{#if configurationExists}} -->
+                              <button class="btn-large" type="submit" > 
+                                {{#if configurationExists}}
+                                  With Google
+                                {{else}}
+                                  Please wait
+                                {{/if}}
+                              </button>  <br><br>
+                              <!-- {{/if}} -->
+                              <!-- <a class="registerlink" href="/register">Register</a> -->
+                            </div>
+                          </div>
+                        
+                        </form>
+                  </div>
+                </div>
+              </div>
+   
+            </div>
+          </div>
+        </div>
+  <style>
+    body {
+      background-image: url("./wd-back.jpg");
+     background-size: cover;
+      background-color: #cccccc;
+     }
+     .modal-overlay{
+      display: none !important;
+    }
+  </style>
+
+            {{> footertext}}   
+              </template>
+<template name="forgotpassword">
+                &nbsp;<br><br><br><br>
+                <div class="content">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-md-4 offset-md-4 logincard" style="margin: auto; text-align:center;">
+                      
+                          <h2 class="white-text">Forgot Password</h2>
+                          <div class="card">
+                            <img class="loginlogo" src="./wdicon.png">
+                          
+                            <div class="card-body">
+                                <form class="s6 offset-s3">
+                                    <div class="row">
+                                      <div class="input-field col s12">
+                                        <label class="active"> Existing Email</label>
+                                        <input type="email" name="loginEmail" class="validate" min="3" required>
+                                      </div>
+                                    </div>
+                                  
+                                    <div class="row">
+                                      <div class="input-field col s12 loginbuttonarea">
+                                        <button class="btn-large " type="submit" > Reset password </button> <br><br>
+                                        <a class="registerlink" href="/">Login</a>
+                                      </div>
+                                    </div>
+                                  
+                                  </form>
+                            </div>
+                          </div>
+                        </div>
+             
+                      </div>
+                    </div>
+                  </div>
+            
+                  <style>
+                    body {
+                      background-image: url("./wd-back.jpg");
+                     background-size: cover;
+                      background-color: #cccccc;
+                     }
+                  </style>
+                         
+                        </template>
+<template name="forgotpasswordsub">
+                          &nbsp;<br><br><br><br>
+                          <div class="content">
+                              <div class="container-fluid">
+                                <div class="row">
+                                  <div class="col-md-4 offset-md-4 logincard" style="margin: auto; text-align:center;">
+                                    <h2 class="white-text">Forgot Password</h2>
+                    
+                                    <div class="card">
+                                      <img class="loginlogo" src="./wdicon.png">
+                                     
+                                          <div class="card-body">
+                                          <form class="s6 offset-s3">
+                                              <div class="row">
+                                                <div class="input-field col s12">
+                                                  <label class="active"> Enter Passcode</label>
+                                                  <input type="text" name="onetimepass" class="validate" min="3" required>
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="input-field col s12">
+                                                  <label class="active">Login Password</label>
+                                                  <input type="password" name="loginPassword" class="validate"  required><br>
+                                                 
+                                                </div>
+                                               
+                                              </div>
+                                              <div class="row">
+                                                <div class="input-field col s12 loginbuttonarea">
+                                                  <button class="btn-large  " type="submit" > Reset password</button><br><br>
+                                                   <a class="registerlink" href="/">Login</a>
+                                                </div>
+                                              </div>
+                                            
+                                            </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                       
+                                </div>
+                              </div>
+                            </div>
+                      
+                            <style>
+                              body {
+                                background-image: url("./wd-back.jpg");
+                               background-size: cover;
+                                background-color: #cccccc;
+                               }
+                            </style>
+                                   
+                                  </template>
+<template name="addContractor">
+                        <div class="row col s12">&nbsp;<br><br><br><br>
+             
+                            
+                        </div>
+                <div class="parallax-container">
+                  <div class="section no-pad-bot">
+                    <div class="container">
+                      <br><br>
+                      <h1 class="header center teal-text text-lighten-2">Add Contractor</h1>
+                      <form autocomplete="off">
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <label>Name</label>
+                            <input name="userName" type="text" class="">
+                          </div>
+                          <div class="input-field col s12">
+                            <label>Contact No</label>
+                            <input name="contactNo" type="number" class="">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <label>Register Email</label>
+                            <input type="email" name="registerEmail">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <label>Register Password</label>
+                            <input name="registerPassword" type="password" class="">
+                          </div>
+                        </div>
+                        <input class="btn waves-effect waves-light" type="submit" value="Add Contractor">
+                      </form>
+                      <br><br>
+                    </div>
+                  </div>
+                </div>
+                {{> footer}}
+              </template>
+<template name="sendInvitation">
+                        <div class="row col s12">&nbsp;<br><br><br><br>
+             
+                            
+                        </div>
+                <div class="parallax-container">
+                  <div class="section no-pad-bot">
+                    <div class="container">
+                      <br><br>
+                      <h1 class="header center teal-text text-lighten-2">Add Contractor</h1>
+                      <form autocomplete="off">
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <label>Email</label>
+                            <input name="email" type="text" class="">
+                          </div>
+                        </div>
+                        <input class="btn waves-effect waves-light" type="submit" value="Send Invitation">
+                      </form>
+                      <br><br>
+                    </div>
+                  </div>
+                </div>
+                {{> footer}}
+              </template>
+<template name="invitationAdd">
+                        <div class="row col s12">&nbsp;<br><br><br><br>
+             
+                            
+                        </div>
+                <div class="parallax-container">
+                  <div class="section no-pad-bot">
+                    <div class="container">
+                      <br><br>
+                      <h1 class="header center teal-text text-lighten-2">Add Contractor</h1>
+                      <form autocomplete="off">
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <label>Name</label>
+                            <input name="userName" type="text" class="">
+                          </div>
+                          <div class="input-field col s12">
+                            <label>Contact No</label>
+                            <input name="contactNo" type="number" class="">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <label>Register Email</label>
+                            <input type="email" name="registerEmail">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <label>Register Password</label>
+                            <input name="registerPassword" type="password" class="">
+                          </div>
+                        </div>
+                        <input class="btn waves-effect waves-light" type="submit" value="Add Contractor">
+                      </form>
+                      <br><br>
+                    </div>
+                  </div>
+                </div>
+                {{> footer}}
+              </template>
+<template name="acceptInvitation">
+                        <div class="row col s12">&nbsp;<br><br><br><br>
+             
+                            
+                        </div>
+                <div class="parallax-container">
+                  <div class="section no-pad-bot">
+                    <div class="container">
+                      <br><br>
+                      <h1 class="header center teal-text text-lighten-2">Accept Invitation</h1>
+                      <form autocomplete="off">
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <label>Name</label>
+                            <input name="userName" type="text" class="">
+                          </div>
+                          <div class="input-field col s12">
+                            <label>Contact No</label>
+                            <input name="contactNo" type="number" class="">
+                          </div>
+                        </div>
+                        <input class="btn waves-effect waves-light" type="submit" value="Accept">
+                      </form>
+                      <br><br>
+                    </div>
+                  </div>
+                </div>
+                {{> footer}}
+              </template>
+<template name="footertext">
+<div class="footertext">Water Damage Reporting <a href="https://gway.com.au/" > by GWAY</a></div>
+              </template>

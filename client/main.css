@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://materializecss.com/dist/css/materialize.min.css");
+input {
+    color: black;
+}
+
+.parallax-container .parallax img {
+    opacity: 1;
+    display: block;
+}
+
+.parallax-container {
+    height: 400px;
+}
+
+.uploadPanel .btn {
+    width: 20% !important;
+}
+
+#navigation-example {
+    box-shadow: 0 7px 11px 0px #b7b8bb;
+    background-color: #fff !important;
+}
+
+.footer {
+    box-shadow: 0 30px 60px 15px #656669;
+}
+
+/* .sidebar {
+    background: linear-gradient(180deg, rgba(44, 98, 115, 1) 24%, rgba(46, 139, 169, 1) 66%, rgba(48, 169, 208, 1) 94%) !important;
+} */
+
+input[type=text],
+input[type=password],
+input[type=email],
+textarea {
+    border: solid 1px rgb(216, 216, 216) !important;
+    border-radius: 5px !important;
+    text-indent: 10px;
+}
+
+.input-field label {
+    padding-left: 10px;
+}
+
+.homecont {
+    height: 100%;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(156, 39, 176, 0.95) 100%);
+}
+
+.loginhbtn {
+    padding: 25%;
+}
+
+#sketchcanvas {
+    /* background-image: url('./dbk.png'); */
+}
+
+.canvasholder {
+    width: 80%;
+    float: right;
+}
+
+.canvasbutton {
+    width: 20%;
+    float: right;
+}
+
+.objectimagegrid {
+    display: none;
+}
+
+.objectimagegrid img {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: solid 2px #d4d1cc;
+    margin-top: 4px;
+    border-radius: 4px;
+}
+
+#workdetails {
+    height: 250px !important;
+    overflow-y: scroll !important;
+}
+
+.imagedel {
+    cursor: pointer;
+}
+
+.previewblock {
+    width: 100px;
+    float: left;
+    border: solid 4px #f6b2b5;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.imagegrayscale {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.previewblock a {
+    position: inherit;
+    margin-top: -201px;
+    margin-left: 70px;
+}
+
+.image_preview img {
+    height: 100px;
+}
+
+.browsebtn {
+    line-height: 1.8rem !important;
+    margin-top: 0px;
+}
+
+.skettoolsbar {
+    width: 75px !important;
+    float: left !important;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.skettoolsbar button {
+    width: 100% !important;
+}
+
+.spinner {
+    position: fixed !important;
+}
+
+.electusesres {
+    font-size: 16px;
+}
+
+.dashboardclaims .card-category {
+    font-size: 18px !important;
+}
+
+.dashboardclaims .card-header {
+    cursor: pointer;
+}
+
+.tabs .indicator {
+    display: none;
+}
+
+.tabs .tab a.active {
+    border-bottom: 2px solid #f6b2b5;
+}
+
+.datepicker-controls input {
+    border: none !important;
+}
+
+#uploadprogress {
+    top: 38% !important;
+}
+
+#uploadprogress .determinate {
+    text-align: center;
+    line-height: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.equipmentdaydelete,
+.travelhourdl {
+    width: 16px;
+}
+
+.equipmentdaydelete .material-icons,
+.travelhourdl .material-icons {
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    cursor: pointer;
+}
